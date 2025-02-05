@@ -1,0 +1,33 @@
+[
+    {
+        "companyName": "Cognizant",
+        "position": "Associate",
+        "startDate": "24-02-2022",
+        "endDate": "Present",
+        "enhancements": [
+            "Migrated PHP based UI application to Angular and backend spring application to spring boot.",
+            "Contenerized both UI and backend application applications.",
+            "Created CI/CD pipeline and moved applications from onpremises server to Azure AKS.",
+            "Implemented security using Azure AD.",
+            "Collaborating with cross-functional teams to ensure compliance with industry standards and regulations.",
+            "Designed customized software solutions in response to unique client requirements.",
+            "Designed and developed automated solutions for client."
+            
+        ]
+    },
+    {
+        "companyName": "Capgemini",
+        "position": "Senior Analyst",
+        "startDate": "12-06-2019",
+        "endDate": "21-02-2022",
+        "enhancements": [
+            "Demonstrated proficiency in UI/UX design, architectural discussions, and the development of complex frameworks.",
+            "Participated in pre-development technical design reviews, pair programming, and testing best practices",
+            "Utilized Angular expertise to create responsive and user-friendly interfaces and understood REST APIs for integration.",
+            "Worked with distinguished clients such as Baker Hughes and Herff Jones, ensuring that deliverables met client expectations.",
+            "Facilitated system expansion, modification, and updates.",
+            "Cleared sonar issues and improved code quality. Written test cases and performed unit testing through Jaismine/Karma."
+            
+        ]
+    }
+]
