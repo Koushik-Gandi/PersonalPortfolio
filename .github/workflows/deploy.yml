@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Triggers the build whenever you push to main branch
+      - develop  # Triggers the build whenever you push to develop branch
 
 jobs:
   build-and-deploy:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Build
         # For primary sites (username.github.io), the base-href must be "/"
-        run: npm run build -- --configuration production --base-href /personal-portfolio/
+        run: npm run build -- --configuration production --base-href /
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
