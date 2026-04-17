@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - develop # Triggers when you push to the develop branch
+      - main # Triggers when you push to the main branch
 
 jobs:
   build-and-deploy:
