@@ -1,28 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Full-Stack Java Developer</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/technical-skills" routerLinkActive="active">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/experience" routerLinkActive="active">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/education" routerLinkActive="active">Education And Certification</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/add-skill" routerLinkActive="active">Add New Skill</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<nav class="navbar">
+  <input type="checkbox" id="nav-toggle" />
+  <div class="nav-logo"><b>Mrudhukoushik Gandi</b></div>
   
+  <!-- Hamburger Toggle Button -->
+  <label for="nav-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  
+  <!-- Links -->
+  <div class="nav-links">
+    <a class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">About</a>
+    <a class="nav-link" routerLink="/technical-skills" routerLinkActive="active" (click)="closeMenu()">Skills</a>
+    <a class="nav-link" routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">Experience & Projects</a>
+    <a class="nav-link" routerLink="/education" routerLinkActive="active" (click)="closeMenu()">Education</a>
+    <!-- <a class="nav-link" routerLink="/add-skill" routerLinkActive="active">Add New Skill</a> -->
+  </div>
+</nav>

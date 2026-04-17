@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
-
+  closeMenu(): void {
+    const toggle = document.getElementById('nav-toggle') as HTMLInputElement;
+    if (toggle) {
+      toggle.checked = false;
+    }
+  }
 }

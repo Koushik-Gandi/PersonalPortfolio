@@ -7,11 +7,13 @@ import { DisplayAllSkillsComponent } from './display-all-skills/display-all-skil
 import { EducationComponent } from './education/education.component';
 
 const routes: Routes = [
-  {path: '', component:HomeComponent},
-  {path: 'experience', component:ExperienceComponent},
-  {path: 'add-skill', component:AddSkillComponent},
-  {path: 'technical-skills', component:DisplayAllSkillsComponent},
-  {path: 'education', component:EducationComponent},
+  { path: 'about', 'title': "About", component: HomeComponent },
+  { path: 'experience', 'title': "Experience", component: ExperienceComponent },
+  { path: 'add-skill', 'title': "Add Skill", component: AddSkillComponent },
+  { path: 'technical-skills', 'title': "Skills", component: DisplayAllSkillsComponent },
+  { path: 'education', 'title': "Education and Certifications", component: EducationComponent },
+  {path: '', redirectTo: '/about', pathMatch: 'full'},
+  {path: '**', redirectTo: '/about', pathMatch: 'full'}
 ];
 
 @NgModule({
