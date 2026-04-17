@@ -1,0 +1,204 @@
+[
+  {
+    "skill": "UI & Web Development",
+    "details": "Angular",
+    "proficiency": "Primary",
+    "image": "assets/Icons/Angular.png",
+    "progress": 100
+  },
+  {
+    "skill": "UI & Web Development",
+    "details": "TypeScript",
+    "proficiency": "Primary",
+    "image": "assets/Icons/TypeScript.png",
+    "progress": 100
+  },
+  {
+    "skill": "UI & Web Development",
+    "details": "HTML",
+    "proficiency": "Primary",
+    "image": "assets/Icons/HTML5.png",
+    "progress": 90
+  },
+  {
+    "skill": "UI & Web Development",
+    "details": "CSS",
+    "proficiency": "Primary",
+    "image": "assets/Icons/CSS3.png",
+    "progress": 90
+  },
+  {
+    "skill": "UI & Web Development",
+    "details": "Bootstrap",
+    "proficiency": "Primary",
+    "image": "assets/Icons/Bootstrap.png",
+    "progress": 90
+  },
+  {
+    "skill": "UI & Web Development",
+    "details": "Node.js",
+    "proficiency": "Secondary",
+    "image": "assets/Icons/NodeJS.png",
+    "progress": 60
+  },
+  {
+    "skill": "UI & Web Development",
+    "details": "React JS",
+    "proficiency": "Learning",
+    "image": "assets/Icons/ReactJS.png",
+    "progress": 60
+  },
+  {
+    "skill": "Backend Development",
+    "details": "Java (11 - 17)",
+    "proficiency": "Primary",
+    "image": "assets/Icons/Java.png",
+    "progress": 70
+  },
+  {
+    "skill": "Backend Development",
+    "details": "Springboot",
+    "proficiency": "Secondary",
+    "image": "assets/Icons/SpringBoot.png",
+    "progress": 70
+  },
+  {
+    "skill": "Backend Development",
+    "details": "REST APIs",
+    "proficiency": "Secondary",
+    "image": "assets/Icons/RestApi.png",
+    "progress": 70
+  },
+  {
+    "skill": "Database Management",
+    "details": "IBM Db2",
+    "proficiency": "Primary",
+    "image": "assets/Icons/IBMDB2.png",
+    "progress": 80
+  },
+  {
+    "skill": "Database Management",
+    "details": "PostgreSQL",
+    "proficiency": "Primary",
+    "image": "assets/Icons/PostgreSQL.png",
+    "progress": 80
+  },
+  {
+    "skill": "IDE",
+    "details": "IntelliJ IDEA",
+    "proficiency": "Primary",
+    "image": "assets/Icons/IntelliJ.png",
+    "progress": 85
+  },
+  {
+    "skill": "IDE",
+    "details": "VS Code",
+    "proficiency": "Primary",
+    "image": "assets/Icons/VSCode.png",
+    "progress": 85
+  },
+  {
+    "skill": "IDE",
+    "details": "Eclipse",
+    "proficiency": "Secondary",
+    "image": "assets/Icons/Eclipse.png",
+    "progress": 85
+  },
+  {
+    "skill": "Version Control",
+    "details": "GitHub",
+    "proficiency": "Primary",
+    "image": "assets/Icons/GitHub.png",
+    "progress": 80
+  },
+  {
+    "skill": "Cloud Computing",
+    "details": "Microsoft Azure",
+    "proficiency": "Primary",
+    "image": "assets/Icons/Azure.png",
+    "progress": 70
+  },
+  {
+    "skill": "Containerization",
+    "details": "Docker",
+    "proficiency": "Primary",
+    "image": "assets/Icons/Docker.png",
+    "progress": 70
+  },
+  {
+    "skill": "Containerization",
+    "details": "Kubernetes",
+    "proficiency": "Primary",
+    "image": "assets/Icons/Kubernetes.png",
+    "progress": 70
+  },
+  {
+    "skill": "SDLC",
+    "details": "Agile & SCRUM",
+    "proficiency": "Primary",
+    "image": "assets/Icons/Agile.png",
+    "progress": 80
+  },
+  {
+    "skill": "Management Tools",
+    "details": "Jira & Confluence",
+    "image": "assets/Icons/Jira.png",
+    "proficiency": "Primary",
+    "progress": 80
+  },
+  {
+    "skill": "AI Tools",
+    "details": "GitHub Co-Pilot",
+    "proficiency": "Primary",
+    "image": "assets/Icons/GitHubCopilot.png",
+    "progress": 80
+  },
+  {
+    "skill": "CI/CD Tools",
+    "details": "GitHub Actions",
+    "proficiency": "",
+    "progress": 60
+  },
+  {
+    "skill": "Security Principles",
+    "details": "Spring JWT",
+    "proficiency": "",
+    "progress": 60
+  },
+  {
+    "skill": "Security Principles",
+    "details": "SSL & Azure AD",
+    "proficiency": "",
+    "progress": 60
+  },
+  {
+    "skill": "Documentation",
+    "details": "MS Office",
+    "proficiency": "",
+    "progress": 80
+  },
+  {
+    "skill": "Documentation",
+    "details": "Google Docs",
+    "proficiency": "",
+    "progress": 80
+  },
+  {
+    "skill": "Communication",
+    "details": "English, Hindi & Telugu",
+    "proficiency": "",
+    "progress": 80
+  },
+  {
+    "skill": "Soft Skills",
+    "details": "Problem Solving & Quick Learner",
+    "proficiency": "",
+    "progress": 80
+  },
+  {
+    "skill": "Soft Skills",
+    "details": "Team Player & Management",
+    "proficiency": "",
+    "progress": 80
+  }
+]
