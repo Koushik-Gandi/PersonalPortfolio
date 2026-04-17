@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Personal Portfolio</title>
+    <script type="text/javascript">
+      // Get the path from the URL
+      var pathSegments = window.location.pathname.split('/').filter(segment => segment);
+      
+      // Reconstruct the path without the first segment if it's the repo name
+      var repoName = 'Personal-Portfolio';
+      if (pathSegments[0] === repoName) {
+        pathSegments.shift();
+      }
+      
+      // Redirect to index.html with the path as a query parameter
+      var redirectPath = '/Personal-Portfolio/?' + pathSegments.join('/');
+      window.location.replace(redirectPath);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
