@@ -3,13 +3,15 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Triggers when you push to the main branch
+      - main # Triggers the build whenever you push to main branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
     permissions:
-      contents: write
+      contents: write # Crucial: Allows the action to push built files back to GitHub
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -17,16 +19,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Use LTS version compatible with Angular 19
+          node-version: '20' # Use '18' or '20' depending on your Angular version
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
-        run: npm run build -- --base-href=/
+        # For primary sites (username.github.io), the base-href must be "/"
+        run: npm run build -- --configuration production --base-href /
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages # The branch the action will push build files to
-          folder: dist/personal-portfolio # Path to your built files
+          branch: main # Primary github.io sites must serve from the 'main' branch
+          folder: dist/personal-portfolio # DOUBLE CHECK: Path may vary by Angular version
