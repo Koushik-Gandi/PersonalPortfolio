@@ -32,5 +32,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main # Primary github.io sites must serve from the 'main' branch
+          branch: gh-pages # Deploy to gh-pages branch for project repositories
           folder: dist/personal-portfolio # Path matches Angular outputPath
