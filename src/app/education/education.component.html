@@ -1,0 +1,7 @@
+<h2 class="header">Education</h2>
+<div *ngFor="let education of educationList" class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title text-primary">{{ education.degree }}</h5>
+    <p class="edu-institution">{{ education.institution }}  <span style="float: right;">{{ education.year }}</span></p>
+  </div>
+</div>
