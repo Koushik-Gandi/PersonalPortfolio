@@ -15,7 +15,6 @@ export class ExperienceComponent {
   ngOnInit(): void {
     this.service.getExperienceData().subscribe((response) => {
       this.data = response;
-      console.log(response);
     });
   }
 
