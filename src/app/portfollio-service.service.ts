@@ -21,19 +21,19 @@ export class PortfollioServiceService {
   }
 
   getExperienceData(): Observable<Experience[]> {
-    return this.http.get<any[]>('/assets/workExperienceData.json'); 
+    return this.http.get<any[]>('assets/workExperienceData.json'); 
   }
 
   getProfileData(): Observable<any[]> {
-    return this.http.get<any[]>('/assets/personalDetails.json'); 
+    return this.http.get<any[]>('assets/personalDetails.json'); 
   }
 
   getAllSkills(): Observable<any[]> {
     // return this.http.get<any[]>(this.baseUrl+'/getAllSkills');
-    return this.http.get<any[]>('/assets/skillsData.json'); 
+    return this.http.get<any[]>('assets/skillsData.json'); 
   }
 
   getEducationData(): Observable<any[]> {
-    return this.http.get<any[]>('/assets/educationDetails.json'); 
+    return this.http.get<any[]>('assets/educationDetails.json'); 
   }
 }
