@@ -26,11 +26,11 @@ jobs:
         run: npm ci
 
       - name: Build
-        # For primary sites (username.github.io), the base-href must be "/"
+        # For project sites (username.github.io/repo-name), the base-href must be "/Personal-Portfolio/"
         run: npm run build -- --configuration production --base-href /Personal-Portfolio/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: main # Primary github.io sites must serve from the 'main' branch
-          folder: dist/portfolio # DOUBLE CHECK: Path may vary by Angular version
+          folder: dist/personal-portfolio # Path matches Angular outputPath
