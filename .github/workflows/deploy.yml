@@ -27,7 +27,7 @@ jobs:
 
       - name: Build
         # For primary sites (username.github.io), the base-href must be "/"
-        run: npm run build -- --configuration production --base-href /portfolio/
+        run: npm run build -- --configuration production --base-href /Personal-Portfolio/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
