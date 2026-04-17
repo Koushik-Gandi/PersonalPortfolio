@@ -1,0 +1,34 @@
+.social-links .btn {
+  margin-right: 10px;
+}
+
+.contact-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.contact-item i {
+  color: yellowgreen;
+}
+
+.location {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
