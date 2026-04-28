@@ -1,7 +1,15 @@
 <h2 class="header text-center">Education</h2>
-<div *ngFor="let education of educationList" class="card mb-4">
-  <div class="card-body">
-    <h5 class="card-title text-primary">{{ education.degree }}</h5>
-    <p class="edu-institution">{{ education.institution }}  <span style="float: right;">{{ education.year }}</span></p>
+<div class="education-section">
+  <div *ngFor="let education of educationList" class="education-card">
+    <div class="edu-icon">
+      <i class="bi bi-mortarboard-fill"></i>
+    </div>
+    <div class="edu-details">
+      <div class="edu-header">
+        <h3>{{ education.degree }}</h3>
+        <span class="edu-year">{{ education.year }}</span>
+      </div>
+      <p class="edu-institution">{{ education.institution }}</p>
+    </div>
   </div>
 </div>
