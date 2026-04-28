@@ -1,27 +1,86 @@
 <h2 class="header text-center">About Me</h2>
 <div class="location">
+  <h5 [innerHTML]="getSafeHtml(details.title)"></h5>
   Currently based in Vilnius, Lithuania — open to relocate
 </div>
 <hr />
-<p>
-  Hi, I’m {{details.name}}, {{details.bio}}
-</p>
-<br><br>
-<div class="social-links text-center">
-  <a [href]="details.linkedInUrl" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-    <i class="bi bi-linkedin"></i> LinkedIn
-  </a>
-  <a [href]="details.email" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-    <i class="bi bi-envelope"></i> Email
-  </a>
-  <a [href]="details.github" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-    <i class="bi bi-github"></i> GitHub
-  </a>
-</div>
-
-<div class="contact-info text-center">
-  <div class="contact-item">
-    <i class="bi bi-telephone-fill"></i>
-    <span>Phone: +370 60651156 / +91 7386159202</span>
+<section class="frontend-portfolio">
+  <!-- Hero Section -->
+  <div class="hero-block">
+    <p class="subtitle">{{ details.greeting }}</p>
   </div>
-</div>
+
+  <div class="content-wrapper">
+    <!-- Intro Narrative -->
+    <div class="main-bio">
+      <p [innerHTML]="getSafeHtml(details.intro)"></p>
+    </div>
+
+    <!-- Frontend Specialization Cards -->
+    <div class="specialization-grid">
+      <div class="spec-card">
+        <div class="icon"><i class="fas fa-layer-group"></i></div>
+        <h3>The Foundation</h3>
+        <p [innerHTML]="getSafeHtml(details.frontendStory)"></p>
+      </div>
+
+      <div class="spec-card highlight">
+        <div class="icon"><i class="fab fa-angular"></i></div>
+        <h3>Modernization & Cloud</h3>
+        <p [innerHTML]="getSafeHtml(details.bridgeRole)"></p>
+      </div>
+    </div>
+
+    <!-- Quality & Philosophy Section -->
+    <div class="quality-banner">
+      <div class="banner-text">
+        <h3><i class="fas fa-check-circle"></i> Engineering Rigor</h3>
+        <p [innerHTML]="getSafeHtml(details.philosophy)"></p>
+      </div>
+    </div>
+
+    <!-- Closing / CTA -->
+    <footer class="about-footer">
+      <p [innerHTML]="getSafeHtml(details.closing)"></p>
+    </footer>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Social Media Icons -->
+    <div class="social-links text-center">
+      <a [href]="details.linkedInUrl" class="footer-btn" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-linkedin"></i> LinkedIn
+      </a>
+      <a [href]="'mailto:' + details.email" class="footer-btn" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-envelope-at-fill"></i> Email
+      </a>
+      <a [href]="details.github" class="footer-btn" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-github"></i> GitHub
+      </a>
+    </div>
+
+    <!-- Contact Details with Icons -->
+    <div class="contact-info text-center">
+      <div class="contact-item">
+        <i class="bi bi-telephone-fill"></i>
+        <span><strong>Phone:</strong> +370 60651156 / +91 7386159202</span>
+      </div>
+      <div class="contact-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>Vilnius, Lithuania | Remote</span>
+      </div>
+    </div>
+
+    <!-- Technical Badges / Copyright -->
+    <div class="footer-bottom text-center">
+      <p>
+        <i class="bi bi-code-slash"></i> Crafted with <strong>Angular</strong>
+        <span class="separator">|</span>
+        <i class="bi bi-cloud-check-fill"></i> Hosted on <strong>GitHub Pages</strong>
+      </p>
+    </div>
+  </div>
+</footer>

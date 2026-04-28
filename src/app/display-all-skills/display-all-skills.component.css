@@ -163,3 +163,56 @@
     font-size: 12px;
   }
 }
+
+/* Mobile Optimized Styles */
+@media (max-width: 768px) {
+  .section-subtitle {
+    font-size: 1.25rem; /* Smaller headers for mobile */
+    margin-top: 30px;
+  }
+
+  .skills-container {
+    justify-content: center; /* Center cards on smaller screens */
+    gap: 12px;
+  }
+
+  .skill-card {
+    /* Adjust width for 2 cards per row (subtracting gap) */
+    width: calc(50% - 6px); 
+    padding: 15px 10px;
+    height: auto; /* Allow card to grow if text wraps */
+  }
+
+  .skill-ring {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skill-ring::before {
+    width: 62px;
+    height: 62px;
+  }
+
+  .skill-ring img {
+    width: 35px;
+  }
+
+  .proficiency-label {
+    font-size: 0.75rem;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+/* Very Small Devices (Phones) */
+@media (max-width: 480px) {
+  .skill-card {
+    /* 1 card per row for maximum readability */
+    width: 100%;
+    aspect-ratio: auto; /* Remove square constraint for long text */
+  }
+  
+  .skill-card p {
+    font-size: 13px;
+  }
+}

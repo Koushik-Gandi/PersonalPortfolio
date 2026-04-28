@@ -1,12 +1,147 @@
-.social-links .btn {
-  margin-right: 10px;
+/* --- Global Portfolio Styles --- */
+.frontend-portfolio {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #2d3436;
 }
 
+.hero-block h1 {
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.hero-block h1 strong {
+  color: yellowgreen;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #636e72;
+  margin-bottom: 40px;
+}
+
+.main-bio {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  border-left: 4px solid #eee;
+  padding-left: 25px;
+}
+
+/* Card Grid Layout */
+.specialization-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.spec-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.spec-card:hover {
+  transform: translateY(-5px);
+}
+
+.spec-card.highlight {
+  border: 2px solid yellowgreen;
+}
+
+.spec-card .icon {
+  font-size: 2rem;
+  color: yellowgreen;
+  margin-bottom: 15px;
+}
+
+.spec-card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+/* Quality Banner */
+.quality-banner {
+  background: #2d3436;
+  color: #dfe6e9;
+  padding: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.quality-banner h3 {
+  color: yellowgreen;
+  margin-top: 0;
+}
+
+.about-footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 1.25rem;
+}
+
+/* --- Footer Section --- */
+.site-footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 50px 0 20px;
+  border-top: 4px solid yellowgreen;
+}
+
+/* Social Buttons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-btn i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-btn:hover {
+  background-color: yellowgreen;
+  color: #1a1a1a;
+  border-color: yellowgreen;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(154, 205, 50, 0.3);
+}
+
+.footer-btn:hover i {
+  transform: scale(1.1);
+}
+
+/* Contact Info Items */
 .contact-info {
   margin-top: 20px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
@@ -15,20 +150,65 @@
 .contact-item {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.95rem;
-  color: #333;
-  background: rgba(255, 255, 255, 0.9);
+  gap: 12px;
+  font-size: 1rem;
+  color: #ddd; /* Lightened for dark footer background */
   padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
 }
 
 .contact-item i {
   color: yellowgreen;
+  font-size: 1.2rem;
 }
 
 .location {
   font-size: 15px;
   margin-bottom: 20px;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  color: #888;
+  text-align: center;
+}
+
+.footer-bottom i {
+  color: yellowgreen;
+  margin: 0 5px;
+}
+
+.separator {
+  margin: 0 15px;
+  color: #444;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+  .specialization-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-block h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

@@ -1,33 +1,46 @@
 [
     {
-        "companyName": "Cognizant",
-        "position": "Associate",
-        "startDate": "24-02-2022",
-        "endDate": "Present",
-        "enhancements": [
-            "Migrated PHP based UI application to Angular and backend spring application to spring boot.",
-            "Contenerized both UI and backend application applications.",
-            "Created CI/CD pipeline and moved applications from onpremises server to Azure AKS.",
-            "Implemented security using Azure AD.",
-            "Collaborating with cross-functional teams to ensure compliance with industry standards and regulations.",
-            "Designed customized software solutions in response to unique client requirements.",
-            "Designed and developed automated solutions for client."
-            
+        "role": "Associate",
+        "company": "Cognizant",
+        "period": "Feb 2022 – Present",
+        "location": "Remote/Hybrid",
+        "description": "Leading the modernization of enterprise-scale applications and cloud transformation, bridging the gap between legacy reliability and modern scalability.",
+        "achievements": [
+            "Architected and executed the end-to-end migration of legacy <strong>PHP/Spring</strong> monolithic UIs to a high-performance <strong>Angular & Spring Boot</strong> ecosystem.",
+            "Spearheaded Containerization efforts using <strong>Docker</strong>, creating a standardized environment that eliminated 'it works on my machine' inconsistencies.",
+            "Established automated <strong>CI/CD</strong> Pipelines on <strong>Azure</strong>, transitioning workloads from on-premises servers to <strong>Azure AKS</strong> for 99.9% availability.",
+            "Hardened application security by implementing <strong>Azure AD</strong> for centralized identity management and secure SSO integration.",
+            "Collaborated with cross-functional stakeholders to ensure 100% compliance with stringent industry regulations and security standards."
+        ],
+        "techStack": [
+            "Angular",
+            "Spring Boot",
+            "Azure AKS",
+            "Azure AD",
+            "Docker",
+            "CI/CD"
         ]
     },
     {
-        "companyName": "Capgemini",
-        "position": "Senior Analyst",
-        "startDate": "12-06-2019",
-        "endDate": "21-02-2022",
-        "enhancements": [
-            "Demonstrated proficiency in UI/UX design, architectural discussions, and the development of complex frameworks.",
-            "Participated in pre-development technical design reviews, pair programming, and testing best practices",
-            "Utilized Angular expertise to create responsive and user-friendly interfaces and understood REST APIs for integration.",
-            "Worked with distinguished clients such as Baker Hughes and Herff Jones, ensuring that deliverables met client expectations.",
-            "Facilitated system expansion, modification, and updates.",
-            "Cleared sonar issues and improved code quality. Written test cases and performed unit testing through Jaismine/Karma."
-            
+        "role": "Senior Analyst",
+        "company": "Capgemini",
+        "period": "Jun 2019 – Feb 2022",
+        "location": "Office-based",
+        "description": "Focused on UI/UX Engineering and architectural framework development for Fortune 500 energy and industrial clients.",
+        "achievements": [
+            "Developed complex, responsive frontend modules using <strong>Angular</strong>, delivering seamless user experiences for clients like <strong>Baker Hughes</strong>.",
+            "Participated in high-level architectural discussions and technical design reviews, ensuring long-term scalability of the codebase.",
+            "Improved system reliability by writing comprehensive unit tests via <strong>Jasmine</strong> and <strong>Karma</strong>, reaching high code coverage targets.",
+            "Optimized code quality by resolving critical <strong>SonarQube</strong> issues and implementing pair programming best practices.",
+            "Integrated complex <strong>REST APIs</strong>, ensuring smooth data synchronization between the UI and backend services for industrial monitoring tools."
+        ],
+        "techStack": [
+            "Angular",
+            "JavaScript/TS",
+            "Jasmine",
+            "Karma",
+            "REST APIs",
+            "SonarQube"
         ]
     }
 ]

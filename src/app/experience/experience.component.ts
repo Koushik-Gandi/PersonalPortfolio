@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PortfollioServiceService } from '../portfollio-service.service';
 import { Experience } from '../models/experience';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-experience',
@@ -9,13 +10,27 @@ import { Experience } from '../models/experience';
 })
 export class ExperienceComponent {
  
-  data: Experience[] = [];
+  experience: Experience[] = [];
 
-  constructor(private service: PortfollioServiceService) {}
+  constructor(private service: PortfollioServiceService,
+    private sanitizer: DomSanitizer
+  ) {}
   ngOnInit(): void {
-    this.service.getExperienceData().subscribe((response) => {
-      this.data = response;
-    });
+    this.service.getExperienceData().subscribe({
+      next: (data) => {
+       
+        this.experience = data;
+      },
+      error: (err) => {
+        console.error('Error loading JSON data', err);
+      }
+    }
+      
+    );
   }
+
+  getSafeHtml(content: string): SafeHtml {
+      return this.sanitizer.bypassSecurityTrustHtml(content);
+    }
 
 }

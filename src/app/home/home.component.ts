@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PortfollioServiceService } from '../portfollio-service.service';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -8,14 +9,20 @@ import { PortfollioServiceService } from '../portfollio-service.service';
 })
 export class HomeComponent {
 
-details:any ={name:"",bio:"",linkedInUrl:"",email:"",github:""};
+  details: any = { name: "", bio: "", linkedInUrl: "", email: "", github: "" };
 
-constructor(private service: PortfollioServiceService) {}
+  constructor(private service: PortfollioServiceService,
+    private sanitizer: DomSanitizer
+  ) { }
 
-ngOnInit(): void {
-  this.service.getProfileData().subscribe((response) => {
-    this.details = response[0];
-  });
-}
+  ngOnInit(): void {
+    this.service.getProfileData().subscribe((response) => {
+      this.details = response[0];
+    });
+  }
+
+  getSafeHtml(content: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(content);
+  }
 
 }
