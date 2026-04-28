@@ -1,20 +1,23 @@
 <nav class="navbar">
   <input type="checkbox" id="nav-toggle" />
   <div class="nav-logo"><b>Koushik Gandi</b></div>
-  
+
   <!-- Hamburger Toggle Button -->
   <label for="nav-toggle" class="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </label>
-  
+
   <!-- Links -->
   <div class="nav-links">
-    <a class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">About</a>
+    <a class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+      (click)="closeMenu()">About</a>
     <a class="nav-link" routerLink="/technical-skills" routerLinkActive="active" (click)="closeMenu()">Skills</a>
-    <a class="nav-link" routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">Experience & Projects</a>
+    <a class="nav-link" routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">Experience &
+      Projects</a>
     <a class="nav-link" routerLink="/education" routerLinkActive="active" (click)="closeMenu()">Education</a>
     <!-- <a class="nav-link" routerLink="/add-skill" routerLinkActive="active">Add New Skill</a> -->
   </div>
 </nav>
+<div style="margin-top: 8%;"><router-outlet></router-outlet></div>

@@ -8,37 +8,31 @@ import { PortfollioServiceService } from '../portfollio-service.service';
 })
 export class DisplayAllSkillsComponent {
 
-  skills:any = [];
-  
-  errorMsg:string = '';
+  skills: any = [];
+
+  errorMsg: string = '';
   primaryExpanded: boolean = true;
   secondaryExpanded: boolean = true;
   learningExpanded: boolean = true;
 
-  constructor(private service: PortfollioServiceService ) {}
+  constructor(private service: PortfollioServiceService) { }
 
   ngOnInit(): void {
     this.service.getAllSkills().subscribe((response) => {
       this.skills = response;
-      if(this.skills.length == 0) {
+      if (this.skills.length == 0) {
         this.errorMsg = 'No skills found'
       }
-      },
-    error=>{
-      this.errorMsg = 'Unable to fetch skills'
-    } ); 
+    },
+      error => {
+        this.errorMsg = 'Unable to fetch skills'
+      });
   }
 
-  togglePrimary(): void {
-    this.primaryExpanded = !this.primaryExpanded;
-  }
+  expandedSection: string | null = 'Primary';
 
-  toggleSecondary(): void {
-    this.secondaryExpanded = !this.secondaryExpanded;
-  }
-
-  toggleLearning(): void {
-    this.learningExpanded = !this.learningExpanded;
+  toggleSection(section: string): void {
+    this.expandedSection = this.expandedSection === section ? null : section;
   }
 
   getPrimarySkills(): any[] {

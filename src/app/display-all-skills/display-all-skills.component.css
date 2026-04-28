@@ -1,3 +1,9 @@
+.skill-section {
+  padding-top: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 /* Section Subtitle */
 .section-subtitle {
   font-size: 1.5rem;
@@ -50,7 +56,8 @@
   justify-content: center;
   position: relative;
   padding: 20px;
-  width: calc(16.666% - 17px); /* 6 cards per row */
+  width: calc(16.666% - 17px);
+  /* 6 cards per row */
   aspect-ratio: 1;
   border: 2px solid lightgray;
   border-radius: 8px;
@@ -167,20 +174,23 @@
 /* Mobile Optimized Styles */
 @media (max-width: 768px) {
   .section-subtitle {
-    font-size: 1.25rem; /* Smaller headers for mobile */
+    font-size: 1.25rem;
+    /* Smaller headers for mobile */
     margin-top: 30px;
   }
 
   .skills-container {
-    justify-content: center; /* Center cards on smaller screens */
+    justify-content: center;
+    /* Center cards on smaller screens */
     gap: 12px;
   }
 
   .skill-card {
     /* Adjust width for 2 cards per row (subtracting gap) */
-    width: calc(50% - 6px); 
+    width: calc(50% - 6px);
     padding: 15px 10px;
-    height: auto; /* Allow card to grow if text wraps */
+    height: auto;
+    /* Allow card to grow if text wraps */
   }
 
   .skill-ring {
@@ -209,9 +219,10 @@
   .skill-card {
     /* 1 card per row for maximum readability */
     width: 100%;
-    aspect-ratio: auto; /* Remove square constraint for long text */
+    aspect-ratio: auto;
+    /* Remove square constraint for long text */
   }
-  
+
   .skill-card p {
     font-size: 13px;
   }

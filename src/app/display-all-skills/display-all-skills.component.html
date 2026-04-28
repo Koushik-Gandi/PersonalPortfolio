@@ -1,61 +1,63 @@
 <h2 class="header text-center">Skills</h2>
-<!-- Proficient Skills Section -->
-<div *ngIf="getPrimarySkills().length > 0; else noProficientSkills">
-  <h3 class="section-subtitle toggle-header" (click)="togglePrimary()">
-    <i class="bi" [ngClass]="primaryExpanded ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
-    Primary Skills
-  </h3>
-  <div class="skills-container" *ngIf="primaryExpanded">
-    <div class="skill-card" *ngFor="let skill of getPrimarySkills()">
-      <div class="skill-ring" style="--percent: {{ skill.progress }}">
-        <img src="{{ skill.image }}" alt="{{ skill.details }}" />
+<div class="skill-section">
+  <!-- Proficient Skills Section -->
+  <div *ngIf="getPrimarySkills().length > 0; else noProficientSkills">
+    <h3 class="section-subtitle toggle-header" (click)="toggleSection('Primary')">
+      <i class="bi" [ngClass]="expandedSection === 'Primary' ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
+      Primary Skills
+    </h3>
+    <div class="skills-container" *ngIf="expandedSection === 'Primary'">
+      <div class="skill-card" *ngFor="let skill of getPrimarySkills()">
+        <div class="skill-ring" style="--percent: {{ skill.progress }}">
+          <img src="{{ skill.image }}" alt="{{ skill.details }}" />
+        </div>
+        <span class="skill-percent">{{ skill.progress }}%</span>
+        <h3>{{ skill.details }}</h3>
+        <p>{{ skill.skill }}</p>
       </div>
-      <span class="skill-percent">{{ skill.progress }}%</span>
-      <h3>{{ skill.details }}</h3>
-      <p>{{ skill.skill }}</p>
     </div>
   </div>
-</div>
-<ng-template #noProficientSkills></ng-template>
-<br>
-<!-- Knowledgeable Skills Section -->
-<div *ngIf="getSecondarySkills().length > 0; else noKnowledgeableSkills">
-  <h3 class="section-subtitle toggle-header" (click)="toggleSecondary()">
-    <i class="bi" [ngClass]="secondaryExpanded ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
-    Secondary Skills
-  </h3>
-  <div class="skills-container" *ngIf="secondaryExpanded">
-    <div class="skill-card" *ngFor="let skill of getSecondarySkills()">
-      <div class="skill-ring" style="--percent: {{ skill.progress }}">
-        <img src="{{ skill.image }}" alt="{{ skill.details }}" />
+  <ng-template #noProficientSkills></ng-template>
+  <br>
+  <!-- Knowledgeable Skills Section -->
+  <div *ngIf="getSecondarySkills().length > 0; else noKnowledgeableSkills">
+    <h3 class="section-subtitle toggle-header" (click)="toggleSection('Secondary')">
+      <i class="bi" [ngClass]="expandedSection === 'Secondary' ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
+      Secondary Skills
+    </h3>
+    <div class="skills-container" *ngIf="expandedSection === 'Secondary'">
+      <div class="skill-card" *ngFor="let skill of getSecondarySkills()">
+        <div class="skill-ring" style="--percent: {{ skill.progress }}">
+          <img src="{{ skill.image }}" alt="{{ skill.details }}" />
+        </div>
+        <span class="skill-percent">{{ skill.progress }}%</span>
+        <h3>{{ skill.details }}</h3>
+        <p>{{ skill.skill }}</p>
       </div>
-      <span class="skill-percent">{{ skill.progress }}%</span>
-      <h3>{{ skill.details }}</h3>
-      <p>{{ skill.skill }}</p>
     </div>
   </div>
-</div>
-<ng-template #noKnowledgeableSkills></ng-template>
-<br>
-<div *ngIf="getLearningSkills().length > 0; else noKnowledgeableSkills">
-  <h3 class="section-subtitle toggle-header" (click)="toggleLearning()">
-    <i class="bi" [ngClass]="learningExpanded ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
-    Learning Skills
-  </h3>
-  <div class="skills-container" *ngIf="learningExpanded">
-    <div class="skill-card" *ngFor="let skill of getLearningSkills()">
-      <div class="skill-ring" style="--percent: {{ skill.progress }}">
-        <img src="{{ skill.image }}" alt="{{ skill.details }}" />
+  <ng-template #noKnowledgeableSkills></ng-template>
+  <br>
+  <div *ngIf="getLearningSkills().length > 0; else noKnowledgeableSkills">
+    <h3 class="section-subtitle toggle-header" (click)="toggleSection('Learning')">
+      <i class="bi" [ngClass]="expandedSection === 'Learning' ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
+      Learning Skills
+    </h3>
+    <div class="skills-container" *ngIf="expandedSection === 'Learning'">
+      <div class="skill-card" *ngFor="let skill of getLearningSkills()">
+        <div class="skill-ring" style="--percent: {{ skill.progress }}">
+          <img src="{{ skill.image }}" alt="{{ skill.details }}" />
+        </div>
+        <span class="skill-percent">{{ skill.progress }}%</span>
+        <h3>{{ skill.details }}</h3>
+        <p>{{ skill.skill }}</p>
       </div>
-      <span class="skill-percent">{{ skill.progress }}%</span>
-      <h3>{{ skill.details }}</h3>
-      <p>{{ skill.skill }}</p>
     </div>
   </div>
-</div>
-<ng-template #noKnowledgeableSkills></ng-template>
+  <ng-template #noKnowledgeableSkills></ng-template>
 
-<!-- Error Message -->
-<ng-template #skillsNotAvailable>
-  <h3 class="text-danger" #error>{{errorMsg}}</h3>
-</ng-template>
+  <!-- Error Message -->
+  <ng-template #skillsNotAvailable>
+    <h3 class="text-danger" #error>{{errorMsg}}</h3>
+  </ng-template>
+</div>

@@ -1,10 +1,10 @@
 <h2 class="header text-center">About Me</h2>
-<div class="location">
-  <h5 [innerHTML]="getSafeHtml(details.title)"></h5>
-  Currently based in Vilnius, Lithuania — open to relocate
-</div>
-<hr />
 <section class="frontend-portfolio">
+  <div class="location">
+    <h5 [innerHTML]="getSafeHtml(details.title)"></h5>
+    Currently based in Vilnius, Lithuania — open to relocate
+  </div>
+  <hr />
   <!-- Hero Section -->
   <div class="hero-block">
     <p class="subtitle">{{ details.greeting }}</p>
@@ -54,9 +54,6 @@
       <a [href]="details.linkedInUrl" class="footer-btn" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-linkedin"></i> LinkedIn
       </a>
-      <a [href]="'mailto:' + details.email" class="footer-btn" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-envelope-at-fill"></i> Email
-      </a>
       <a [href]="details.github" class="footer-btn" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-github"></i> GitHub
       </a>
@@ -66,7 +63,11 @@
     <div class="contact-info text-center">
       <div class="contact-item">
         <i class="bi bi-telephone-fill"></i>
-        <span><strong>Phone:</strong> +370 60651156 / +91 7386159202</span>
+        <span> +370 60651156 / +91 7386159202</span>
+      </div>
+      <div class="contact-item">
+        <i class="bi bi-envelope-at-fill"></i>
+        <span>{{details.email}}</span>
       </div>
       <div class="contact-item">
         <i class="bi bi-geo-alt-fill"></i>
