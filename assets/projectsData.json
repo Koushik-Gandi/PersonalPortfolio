@@ -1,0 +1,51 @@
+[
+     {
+        "title": "Pokiwiki",
+        "category": "Personal",
+        "period": "2024",
+        "summary": "A responsive Angular Pokémon wiki app with searchable Pokedex, team pages, and a reusable detail popup component.",
+        "highlights": [
+            "Developed a responsive Angular web application for Pokémon content discovery with client-side routing and dynamic page navigation.",
+            "Built a custom Pokedex view that fetches Pokémon data from local JSON and displays searchable, filterable cards.",
+            "Implemented a reusable detail popup component using @Input()/@Output() for clean, component-driven UI interaction.",
+            "Integrated template-driven navigation and dropdown menus for team pages and informational sections.",
+            "Designed modular services and models for maintainable data fetching and state handling.",
+            "Applied polished UI styling and mobile-friendly layout for smooth user experience.",
+            "Hosted the site on GitHub Pages for fast, secure public access."
+        ],
+        "techStack": [
+            "Angular",
+            "TypeScript",
+            "HTML/CSS",
+            "RxJS",
+            "Angular Router",
+            "HTTP Client",
+            "JSON",
+            "GitHub Pages",
+            "Local JSON data (`assets/db.json`)"
+        ],
+        "link": "https://koushik-gandi.github.io/Pokiwiki/#/about"
+    },
+    {
+        "title": "Personal Portfolio Builder",
+        "category": "Personal",
+        "period": "2025",
+        "summary": "Created a polished Angular portfolio app to showcase skills, experience, and project work.",
+        "highlights": [
+            "Built a responsive layout with a clean UI for About, Experience, Skills, and Projects.",
+            "Added dynamic JSON-driven content so the portfolio is easy to update without code changes.",
+            "Implemented a smooth mobile-first experience with adaptive grid cards and navigation.",
+            "Incorporated reusable Angular components and service-based data fetching for maintainability.",
+            "Hosted the site on GitHub Pages for fast, secure public access."
+        ],
+        "techStack": [
+            "Angular",
+            "TypeScript",
+            "HTML/CSS",
+            "RxJS",
+            "Angular Router",
+            "JSON",
+            "GitHub Pages"
+        ]
+    }
+]
