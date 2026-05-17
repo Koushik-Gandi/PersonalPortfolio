@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Experience } from './models/experience';
+import { Project } from './models/project';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -21,7 +22,11 @@ export class PortfollioServiceService {
   }
 
   getExperienceData(): Observable<Experience[]> {
-    return this.http.get<any[]>('assets/workExperienceData.json'); 
+    return this.http.get<Experience[]>('assets/workExperienceData.json');
+  }
+
+  getProjectsData(): Observable<Project[]> {
+    return this.http.get<Project[]>('assets/projectsData.json');
   }
 
   getProfileData(): Observable<any[]> {

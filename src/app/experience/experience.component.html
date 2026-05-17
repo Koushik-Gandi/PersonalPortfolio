@@ -1,14 +1,51 @@
-<h2 class="header text-center">Experience</h2>
-<div *ngFor="let job of experience" class="experience-card">
-  <h3>{{ job.role }} @ <span class="highlight">{{ job.company }}</span></h3>
-  <span class="date-badge">{{ job.period }}</span>
-  <p class="description">{{ job.description }}</p>
-  
-  <ul>
-    <li *ngFor="let point of job.achievements" [innerHTML]="getSafeHtml(point)"></li>
-  </ul>
-
-  <div class="skills-row">
-    <span *ngFor="let tech of job.techStack" class="tech-tag">{{ tech }}</span>
-  </div>
+<div class="tabs-container">
+  <button class="tab-button" [class.active]="selectedTab === 'experience'"
+    (click)="selectedTab = 'experience'">Experience</button>
+  <button class="tab-button" [class.active]="selectedTab === 'projects'"
+    (click)="selectedTab = 'projects'">Projects</button>
 </div>
+
+<section *ngIf="selectedTab === 'experience'">
+  <!-- <h2 class="header text-center">Experience</h2> -->
+  <div *ngFor="let job of experience" class="experience-card">
+    <h3>{{ job.role }} @ <span class="highlight">{{ job.company }}</span></h3>
+    <span class="date-badge">{{ job.period }}</span>
+    <p class="description">{{ job.description }}</p>
+
+    <ul>
+      <li *ngFor="let point of job.achievements" [innerHTML]="getSafeHtml(point)"></li>
+    </ul>
+
+    <div class="skills-row">
+      <span *ngFor="let tech of job.techStack" class="tech-tag">{{ tech }}</span>
+    </div>
+  </div>
+</section>
+
+<section *ngIf="selectedTab === 'projects'" class="projects-section">
+  <ng-container *ngIf="projects.length; else noProjects">
+    <div class="project-group">
+      <div *ngFor="let project of projects" class="project-card">
+        <div class="project-header">
+          <div>
+            <h4>{{ project.title }}</h4>
+            <p class="project-subtitle">{{ project.period }}</p>
+          </div>
+          <a *ngIf="project.link" [href]="project.link" target="_blank" rel="noopener noreferrer"
+            class="project-link">View</a>
+        </div>
+        <p class="description">{{ project.summary }}</p>
+        <ul>
+          <li *ngFor="let highlight of project.highlights">{{ highlight }}</li>
+        </ul>
+        <div class="skills-row">
+          <span *ngFor="let tech of project.techStack" class="tech-tag">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #noProjects>
+    <p class="empty-message">No projects available yet.</p>
+  </ng-template>
+</section>
